@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 
@@ -12,6 +12,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 0 40px;
+
+  @include xs {
+    min-height: 88px;
+    padding: 0 30px;
+  }
 }
 
 .header__burger_btn {
@@ -23,7 +28,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  // padding-right: 45px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -111,6 +115,7 @@
 
 .header__nav {
   height: 100%;
+  transform: translateX(30px);
 
   @include lg {
     position: fixed;
@@ -121,7 +126,8 @@
     padding-top: 90px;
     background-color: $color_white;
     transition: transform 0.3s ease-out;
-    background-color: aqua;
+    background-color: $color_white;
+    transform: translateX(0);
 
     &::before {
       content: "";

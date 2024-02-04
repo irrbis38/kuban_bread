@@ -1,0 +1,135 @@
+.feedback {
+  padding: 188px 0 450px;
+  background: url("../images/feedback/feedback_bg.png") center bottom / 100%
+    auto no-repeat;
+
+  @include lg {
+    padding: 150px 0 350px;
+  }
+
+  @include xs {
+    padding: 132px 0 142px;
+    background: unset;
+  }
+}
+
+.feedback__title {
+  margin-bottom: 37px;
+  color: #fbcfa9;
+
+  @include xs {
+    display: none;
+    margin-bottom: 27px;
+    color: #1f2c3d;
+  }
+}
+
+.feedback__subtitle {
+  position: relative;
+  margin-bottom: 37px;
+  color: #1f2c3d;
+
+  & > span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      position: relative;
+    }
+  }
+}
+
+.feedback__descr {
+  max-width: 576px;
+  line-height: 144%;
+  margin: 0 auto 30px;
+  color: $color_grey;
+}
+
+.feedback__text {
+  font-family: $font_text;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 233%;
+  text-align: center;
+  color: $color_grey;
+  background-color: transparent;
+
+  &:not(:last-child) {
+    margin-bottom: -3px;
+  }
+
+  @include xs {
+    line-height: 1;
+
+    &:not(:last-child) {
+      margin-bottom: -5px;
+    }
+  }
+}
+
+.feedback__phone {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: max-content;
+  margin: 0 auto 0;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 128%;
+  text-align: center;
+  color: #1f2c3d;
+  transition: opacity 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: 12px;
+    z-index: -1;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #fbcfa9;
+  }
+
+  @include xs {
+    font-size: 48px;
+    line-height: 167%;
+  }
+
+  @include r(360px) {
+    font-size: 38px;
+  }
+}
+
+.feedback__button {
+  display: none;
+
+  @include xs {
+    display: block;
+
+    width: max-content;
+    margin: 38px auto 0;
+    background-color: $color_blue;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color_blue_hover;
+      }
+    }
+  }
+}
