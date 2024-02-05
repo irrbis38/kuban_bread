@@ -1,9 +1,227 @@
 extends base/_layout
 block vars
-    - var pageName = 'product'
+    - var pageName = 'product-page'
 block head
     title Продукт
 block page
+
+    section.product_intro
+        .product_intro__bg
+            +pictureNew('product_intro/product_intro_bg', 'png', '', 1920, 1480, 1000, 1920, 945, 'product_intro')
+
+        .container
+            .product_intro__container
+
+                p.product_intro__label.label_cherry Классические
+
+                h1.product_intro__title 
+                    span Хрустящие
+                    span с паприкой
+
+        .product_intro__images
+
+            .product_intro__images__wrapper
+                .product_intro__img
+                    +picture('product_intro/product_wide_1', 'jpg', 'x2')
+                .product_intro__img
+                    +picture('product_intro/product_wide_2', 'jpg', 'x2')
+
+
+    section.description
+        .container 
+            h2.description__title Описание
+
+            p.description__subtitle Закуска из селедки со сливочным маслом готовится очень просто и быстро. А с помощью блендера, вы сможете приготовить пасту-намазку за считанные минуты. Селедочное масло - это отличный вариант для перекуса, завтрака и закуски на стол. В былые времена, селедочное масло продавали в отделе полуфабрикатов и мы иногда его покупали. 
+
+            ul.description__social 
+                li.description__link
+                    a(href="#")
+                        include ./blocks/icon_vk
+                li.description__link
+                    a(href="#")
+                        include ./blocks/icon_telegram
+                li.description__link
+                    a(href="#")
+                        include ./blocks/icon_link
+
+
+
+    section.ingredients
+        .container 
+            h2.ingredients__title Ингредиенты
+
+            p.ingredients__subtitle В наших хлебцах используются только натуральные ингридиенты не вызывающие аллреги и бла бла бла 
+
+            ul.ingredients__wrapper
+
+                li.ingredients__link 
+                    .ingredients__img 
+                        +picture('ingredients/ingredients_1', 'png', 'x2')
+                    p.ingredients__name Семена кунжута
+
+                li.ingredients__link 
+                    .ingredients__img 
+                        +picture('ingredients/ingredients_2', 'png', 'x2')
+                    p.ingredients__name Ржаная мука
+
+                li.ingredients__link 
+                    .ingredients__img 
+                        +picture('ingredients/ingredients_3', 'png', 'x2')
+                    p.ingredients__name Соль
+
+                li.ingredients__link 
+                    .ingredients__img 
+                        +picture('ingredients/ingredients_4', 'png', 'x2')
+                    p.ingredients__name Соль
+
+
+
+    section.nutrients
+        .nutrients__bg 
+            +picture('nutrients/nutrients_bg_mobile', 'png', 'x2')
+        .nutrients__bg_2
+            +picture('nutrients/nutrients_bg_2', 'png', 'x2')
+        .nutrients__bg_3
+            +picture('nutrients/nutrients_bg_3', 'png', 'x2')
+        .container 
+            h2.nutrients__title
+                span Пищевая и энергетическая ценность
+                span Пищевая ценность
+
+            p.nutrients__subtitle Чтобы получить самую актуальную информацию об ингредиентах и пищевой ценности, изучите обратную сторону упаковки приобретенного продукта.
+
+
+            ul.nutrients__list
+                li.nutrients__item
+                    span Энергетическая ценность (ккал)
+                    span 5 штук
+                li.nutrients__item
+                    span Жиры
+                    span 100 г
+                li.nutrients__item
+                    span Углеводы
+                    span 300 г
+                li.nutrients__item
+                    span Пищевые волокна (клетчатка)
+                    span 1 штука
+                li.nutrients__item
+                    span Белки
+                    span 1 чайная ложка
+
+
+    section.recipes
+        .container 
+            h2.recipes__title.block__title Рецепты
+
+            p.recipes__subtitle.block__subtitle Продолжить знакомство
+
+            p.recipes__descr.block__descr Ищете другие рецепты? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться нашими продуктами в полной мере.
+
+
+            .recipes__wrapper 
+                .recipes__buttons
+                    button.recipes_btn.btn_label.btn_blue(type="button") Классические
+                    button.recipes_btn.btn_label.btn_green(type="button") Вегетарианские
+                    button.recipes_btn.btn_label.btn_orange(type="button") Десертные
+
+            -
+                var recipes_data = [
+                    {
+                        labelClassName: 'label_green',
+                        labelName: 'Вегетарианские',
+                        imgUrl: 'recipes/recipes_1'
+                    },
+                    {
+                        labelClassName: 'label_blue',
+                        labelName: 'Классические',
+                        imgUrl: 'recipes/recipes_2'
+                    },
+                    {
+                        labelClassName: 'label_orange',
+                        labelName: 'Десертные',
+                        imgUrl: 'recipes/recipes_3'
+                    }
+                ]
+
+            .recipes__list
+
+                each item in recipes_data
+
+                    article.recepies__item 
+                        .recipes__pic 
+                            .label.recipes__label(class= item.labelClassName)= item.labelName
+                            +picture(item.imgUrl, 'jpg', 'x2')
+
+                        .recipes__info
+                            .recipes__time 
+                                .recipes__icon
+                                    img(src="./images/time.svg" alt="")
+                                span.recipes__value 20 минут
+                            .recipes__level
+                                .recipes__icon
+                                    img(src="./images/hat.svg" alt="")
+                                span.recipes__value Средняя сложность
+
+                        h3.recipes__name Хлебцы с рикоттой, клубничным вареньем и клубникой
+
+                        a.btn.recipes__show_more(href="#") Подробнее
+
+            a.btn.recipes__all(href="#") Больше рецептов
+
+
+
+    section.production_more
+        .production_more__bg
+            img(src="./images/news/news_bg.png" alt="")
+        .nutrients__bg_3
+            +picture('nutrients/nutrients_bg_3', 'png', 'x2')
+
+
+        .container
+            h2.production_more__title.block__subtitle Еще продукция
+
+            p.production_more__text Ищете другие вкусы? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться нашими продуктами в полной мере.
+
+            .production_more__wrapper
+
+                -
+                    var production_more_data = [
+                        {
+                            labelName: 'Классические',
+                            name: 'Хлебцы Хрустящие Классические бутербродные',
+                            imgUrl: 'goods/goods_1'
+                        },
+                        {
+                            labelName: 'Классические',
+                            name: 'Хлебцы Хрустящие Классические с луком',
+                            imgUrl: 'goods/goods_2'
+                        },
+                        {
+                            labelName: 'Классические',
+                            name: 'Хлебцы Хрустящие Классические бутербродные',
+                            imgUrl: 'goods/goods_1'
+                        }
+                    ]
+
+                .production_more__list
+
+                    each item in production_more_data
+
+                        article.recepies__item 
+                            .production_more__pic
+                                if item.labelName
+                                    .production_more__label.label.label_cherry= item.labelName
+                                +picture(item.imgUrl, 'jpg', 'x2')
+
+                            h3.production_more__name= item.name
+
+                            a.btn.production_more__show_more(href="#") Подробнее
+
+                a.btn.production_more__all(href="#") Загрузить еще
+
+
+
+
 
 
 

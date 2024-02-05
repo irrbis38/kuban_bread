@@ -1,0 +1,177 @@
+.nutrients {
+  position: relative;
+  padding: 250px 0;
+  background-color: #f5f6f9;
+
+  @include lg {
+    padding: 150px 0;
+  }
+
+  @include xs {
+    z-index: 1;
+    padding: 112px 0 118px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.nutrients__bg,
+.nutrients__bg_2,
+.nutrients__bg_3 {
+  picture {
+    display: block;
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.nutrients__bg {
+  display: none;
+
+  @include xs {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1;
+    width: 37%;
+  }
+}
+
+.nutrients__bg_2 {
+  display: block;
+  position: absolute;
+  top: 29.82%;
+  left: 0;
+  z-index: 1;
+  width: 18.85%;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.nutrients__bg_3 {
+  display: block;
+  position: absolute;
+  bottom: -219px;
+  bottom: 0;
+  transform: translateY(50%);
+  left: 62.65%;
+  z-index: 1;
+  width: 22.36%;
+
+  @include xs {
+    min-width: 220px;
+    left: 42.65%;
+  }
+
+  @include r(360px) {
+    left: 14%;
+  }
+}
+
+.nutrients__title {
+  margin-bottom: 33px;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 100%;
+  text-align: center;
+  color: $color_blue;
+
+  @include lg {
+    font-size: 54px;
+  }
+
+  @include xs {
+    margin-bottom: 23px;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 148%;
+    text-align: center;
+  }
+
+  span {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include xs {
+    span {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}
+
+.nutrients__subtitle {
+  max-width: 700px;
+  margin: 0 auto 73px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #35383f;
+
+  @include xs {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+
+.nutrients__list {
+  max-width: 772px;
+  margin: 0 auto;
+}
+
+.nutrients__item {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 26px 10px 35px;
+
+  &:nth-child(2n - 1) {
+    border-radius: 5px;
+    background-color: $color_white;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 18px;
+    color: $color_black;
+
+    &:nth-child(2) {
+      flex-shrink: 0;
+    }
+  }
+
+  @include xs {
+    min-height: 64px;
+    padding: 8px 7px 9px 15px;
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      color: #002f6c;
+    }
+  }
+}

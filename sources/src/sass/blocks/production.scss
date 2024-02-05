@@ -168,6 +168,7 @@
 
     &:not(:last-child) {
       position: relative;
+      z-index: 1;
 
       &::after {
         content: "";
