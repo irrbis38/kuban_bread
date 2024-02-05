@@ -41,7 +41,25 @@ var initIntroSlider = () => {
   });
 };
 
+var initChangeLang = () => {
+  var header_lang_btn = document.querySelector(".header__lang");
+  var lang_menu = document.querySelector(".header__switch_lang");
+  var labels = document.querySelectorAll(".header__label");
+
+  header_lang_btn.addEventListener("click", () => {
+    lang_menu.classList.toggle("active");
+  });
+
+  labels.forEach((label) => {
+    label.addEventListener("click", () => {
+      lang_menu.classList.remove("active");
+      header_lang_btn.children[0].textContent = label.dataset.lang;
+    });
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initHeaderMenu();
   initIntroSlider();
+  initChangeLang();
 });
