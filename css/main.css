@@ -2101,11 +2101,14 @@ picture.intro__pic_mobile {
   }
 }
 .about__show_more {
-  background-color: #73a24a
+  background-color: #73a24a;
+  border: 2px solid #73a24a;
+  transition: color .2s ease-out,background-color .2s ease-out
 }
 @media (hover:hover) {
   .about__show_more:hover {
-    background-color: #d9eec9
+    color: #73a24a;
+    background-color: #fff
   }
 }
 @media (max-width:767px) {
@@ -2357,11 +2360,14 @@ picture.intro__pic_mobile {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  background-color: #002f6c
+  background-color: #002f6c;
+  border: 2px solid #002f6c;
+  transition: color .2s ease-out,background-color .2s ease-out
 }
 @media (hover:hover) {
   .recipes__all:hover {
-    background-color: #6682a6
+    color: #002f6c;
+    background-color: #fff
   }
 }
 @media (max-width:767px) {
@@ -2825,11 +2831,14 @@ picture.intro__pic_mobile {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  background-color: #cb6015
+  background-color: #cb6015;
+  border: 2px solid #cb6015;
+  transition: color .2s ease-out,background-color .2s ease-out
 }
 @media (hover:hover) {
   .news__all:hover {
-    background-color: #fac39c
+    color: #cb6015;
+    background-color: #fff
   }
 }
 @media (max-width:767px) {
@@ -3980,11 +3989,14 @@ picture.intro__pic_mobile {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  background-color: #cb6015
+  background-color: #cb6015;
+  border: 2px solid #cb6015;
+  transition: color .2s ease-out,background-color .2s ease-out
 }
 @media (hover:hover) {
   .production_more__all:hover {
-    background-color: #fac39c
+    color: #cb6015;
+    background-color: #fff
   }
 }
 @media (max-width:767px) {
