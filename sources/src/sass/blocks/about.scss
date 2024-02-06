@@ -92,10 +92,14 @@
 
 .about__show_more {
   background-color: #73a24a;
+  border: 2px solid #73a24a;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
 
   @media (hover: hover) {
     &:hover {
-      background-color: #d9eec9;
+      // background-color: #d9eec9;
+      color: #73a24a;
+      background-color: $color_white;
     }
   }
 

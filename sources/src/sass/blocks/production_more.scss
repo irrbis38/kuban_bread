@@ -221,10 +221,14 @@
   width: max-content;
   margin: 0 auto;
   background-color: $color_brown;
+  border: 2px solid $color_brown;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
 
   @media (hover: hover) {
     &:hover {
-      background-color: $color_brown_btn;
+      color: $color_brown;
+      // background-color: $color_brown_btn;
+      background-color: $color_white;
     }
   }
 
