@@ -951,11 +951,12 @@ template {
   }
 }
 .btn_label {
-  padding: 8px 18px;
+  padding: 7px 18px 9px;
   font-family: "Noto Sans",sans-serif;
   font-weight: 500;
   font-size: 18px;
   text-align: center;
+  white-space: nowrap;
   color: #fff;
   border-radius: 80px;
   transition: color .2s ease-out,background-color .2s ease-out
@@ -1068,7 +1069,7 @@ template {
   color: #fff;
   border-radius: 80px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.06),0 0 4px 0 rgba(0,0,0,.04);
-  text-wrap: nowrap
+  white-space: nowrap
 }
 .label_blue {
   background-color: #22b7f5
@@ -1441,7 +1442,7 @@ button {
   position: absolute;
   top: calc(100% + 16px);
   right: 0;
-  min-width: 188px;
+  min-width: 195px;
   min-height: 100px;
   z-index: 2;
   padding: 19px 22px 19px 18px;
@@ -1525,7 +1526,7 @@ button {
   font-weight: 500;
   font-size: 18px;
   color: #002f6c;
-  text-wrap: nowrap
+  white-space: nowrap
 }
 .main {
   -webkit-flex-grow: 1;
@@ -2729,7 +2730,8 @@ picture.intro__pic_mobile {
   color: #6f6f6f;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.06),0 0 4px 0 rgba(0,0,0,.04);
-  border-radius: 80px
+  border-radius: 80px;
+  white-space: nowrap
 }
 .news__info {
   display: -webkit-flex;
@@ -3305,7 +3307,7 @@ picture.intro__pic_mobile {
   font-weight: 500;
   font-size: 18px;
   color: #fff;
-  text-wrap: nowrap;
+  white-space: nowrap;
   border-radius: 8px
 }
 @media (max-width:767px) {
