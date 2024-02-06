@@ -243,7 +243,7 @@
   position: absolute;
   top: calc(100% + 16px);
   right: 0;
-  min-width: 188px;
+  min-width: 195px;
   min-height: 100px;
   z-index: 2;
   padding: 19px 22px 19px 18px;
@@ -328,5 +328,5 @@
   font-weight: 500;
   font-size: 18px;
   color: #002f6c;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
