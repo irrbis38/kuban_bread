@@ -1,6 +1,7 @@
 .about {
   position: relative;
   padding: 188px 0 225px;
+  min-width: 320px;
 
   @include lg {
     padding: 120px 0 150px;

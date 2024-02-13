@@ -1,0 +1,154 @@
+extends base/_layout
+block vars
+    - var pageName = 'recepies'
+block head
+    title Рецепты
+block page
+
+    section.presentation_intro
+        .presentation_intro__bg
+            +pictureNew('presentation/presentation_bg', 'png', '', 1920, 1500, 800, 1920, 945, 'presentation_intro__pic_wide')
+            +pictureNew('presentation/presentation_bg_mobile', 'jpg', '', 750, 568, 461, 700, 375, 'presentation_intro__pic_mobile')
+
+        .presentation_intro__content
+            .container.presentation_intro__container
+
+                h1.presentation_intro__title.block__title Продукция
+
+                p.presentation_intro__subtitle.block__subtitle
+                    span Каждый найдет, что-то для
+                    span себя на #[span.line_bg каждый день!]
+
+                p.presentation_intro__subtitle_mobile.block__subtitle_mobile
+                    span Удивляйте себя 
+                    span #[span.line_bg новыми вкусовыми]
+                    span сочетаниями! 
+
+                p.presentation_intro__text Наша компания началась с идеи создать здоровый продукт. И нам удалось воплотить ее в жизнь! Мы производим линейки хлебцев: Традиционная, Лайт, ФитнесЛайн, Бородинские
+
+
+    .goods 
+        -
+            var filters = [
+                {
+                    name: 'Все',
+                    class: 'btn_grey'
+                },
+                {
+                    name: 'Классические',
+                    class: 'btn_cherry'
+                },
+                {
+                    name: 'Цельнозерновые',
+                    class: 'btn_green_light'
+                },
+                {
+                    name: 'Идеальная формула',
+                    class: 'btn_violet'
+                },
+                {
+                    name: 'Безглютеновые',
+                    class: 'btn_green_deep'
+                },
+                {
+                    name: 'Фруктовые',
+                    class: 'btn_red_carrot'
+                },
+                {
+                    name: 'Сухие завтраки',
+                    class: 'btn_carrot'
+                },
+                {
+                    name: 'Отруби',
+                    class: 'btn_blue_dark'
+                },
+                {
+                    name: '|',
+                    class: 'btn_last_child'
+                }
+            ]
+
+        .goods__top
+            .goods__filters.hidescrollbar
+                each filter in filters
+
+                    button.goods__btn.btn_label(class= filter.class type="button")= filter.name
+
+        .container
+            -
+                var goods_data = [
+                    {
+                        labelClass: 'label_cherry',
+                        labelName: 'Классические',
+                        imgUrl: 'goods/goods_1',
+                        name: 'Хлебцы Хрустящие Классические бутербродные'
+                    },
+                    {
+                        labelClass: 'label_cherry',
+                        labelName: 'Классические',
+                        imgUrl: 'goods/goods_2',
+                        name: 'Хлебцы Хрустящие Классические с луком'
+                    },
+                    {
+                        labelClass: 'label_green_light',
+                        labelName: 'Цельнозерновые',
+                        imgUrl: 'goods/goods_3',
+                        name: 'Хлебцы Хрустящие Цельнозерновые с чесноком'
+                    },
+                    {
+                        labelClass: 'label_green_light',
+                        labelName: 'Цельнозерновые',
+                        imgUrl: 'goods/goods_4',
+                        name: 'Хлебцы Хрустящие Цельнозерновые овсяные'
+                    },
+                    {
+                        labelClass: 'label_violet',
+                        labelName: 'Идеальная формула',
+                        imgUrl: 'goods/goods_5',
+                        name: 'Хлебцы Хрустящие “Идеальная формула” с льном и кунжутом'
+                    },
+                    {
+                        labelClass: 'label_green_deep',
+                        labelName: 'Безглютеновые',
+                        imgUrl: 'goods/goods_6',
+                        name: 'Хлебцы Хрустящие Безглютеновые гречнево-рисовые с нутом'
+                    },
+                    {
+                        labelClass: 'lable_red_carrot',
+                        labelName: 'Фруктовые',
+                        imgUrl: 'goods/goods_7',
+                        name: 'Хлебцы Хрустящие Фруктовые с апельсином и корицей'
+                    },
+                    {
+                        labelClass: 'label_carrot',
+                        labelName: 'Сухие завтраки',
+                        imgUrl: 'goods/goods_8',
+                        name: 'Подушечки с начинкой “Карамель”'
+                    },
+                    {
+                        labelClass: 'label_blue_dark',
+                        labelName: 'Отруби',
+                        imgUrl: 'goods/goods_9',
+                        name: 'Отруби ржаные “Идеальная формула”'
+                    }
+                ]
+
+            .goods__wrapper
+
+                each good in goods_data
+
+                    .goods__item 
+                        .goods__pic
+                            .goods__label.label(class= good.labelClass)= good.labelName
+                            +picture(good.imgUrl, 'png', 'x2')
+
+                        .goods__name= good.name
+
+                        a.btn.goods__more(href="#") Подробнее
+
+
+            button.btn.recipes__all(type="button") Загрузить еще
+
+
+
+    include ./blocks/_feedback

@@ -15,8 +15,8 @@ block page
 
                     .intro__slide.swiper-slide
                         .intro__bg
-                            +pictureNew('intro/intro_bg', 'jpg', '', 1920, 1488, 1156, 1920, 945, 'intro__pic_wide')
-                            +pictureNew('intro/intro_bg_mobile', 'jpg', '', 750, 653, 480, 700, 375, 'intro__pic_mobile')
+                            +pictureNew('intro/intro_bg', 'jpg', '', 1920, 1450, 1000, 1920, 945, 'intro__pic_wide')
+                            +pictureNew('intro/intro_bg_mobile', 'jpg', '', 750, 600, 375, 700, 375, 'intro__pic_mobile')
                         .intro__content
                             .container.intro__container
                                 h1.intro__title ООО Кубанские хлебцы
@@ -41,50 +41,50 @@ block page
                     h3.production__name 
                         span Хлебцы
                         span классические
-                    +picture('production/production_1', 'jpg', 'x2')
+                    +pictureSize('production/production_1', 'jpg', 'x2', 464, 400)
 
                 article.production__item.production__item2
                     h3.production__name 
                         span Хлебцы
 
                         span цельнозерновые
-                    +picture('production/production_2', 'jpg', 'x2')
+                    +pictureSize('production/production_2', 'jpg', 'x2', 464, 400)
 
                 article.production__item.production__item3
                     h3.production__name 
                         span Хлебцы 
                         span “Идеальная формула”
-                    +picture('production/production_3', 'jpg', 'x2')
+                    +pictureSize('production/production_3', 'jpg', 'x2', 464, 400)
 
                 article.production__item.production__item4
                     h3.production__name 
                         span Хлебцы
                         span фруктовые
-                    +picture('production/production_4', 'jpg', 'x2')
+                    +pictureSize('production/production_4', 'jpg', 'x2', 340, 398)
 
                 article.production__item.production__item5
                     h3.production__name 
                         span Хлебцы
                         span безглютеновые
-                    +picture('production/production_5', 'jpg', 'x2')
+                    +pictureSize('production/production_5', 'jpg', 'x2', 340, 398)
 
                 article.production__item.production__item6
                     h3.production__name 
                         span Сухие завтраки
-                    +picture('production/production_6', 'jpg', 'x2')
+                    +pictureSize('production/production_6', 'jpg', 'x2', 340, 398)
 
                 article.production__item.production__item7
                     h3.production__name 
                         span Отруби
-                    +picture('production/production_7', 'jpg', 'x2')
+                    +pictureSize('production/production_7', 'jpg', 'x2', 340, 398)
 
             button.btn.production__show_more(type="button") Вся продукция
 
 
     section.about
         .about__bg
-            +pictureNew('about/about_bg', 'jpg', '', 1920, 1632, 1131, 1920, 1077, 'about__pic_wide')
-            +pictureNew('about/about_bg_mobile', 'jpg', '', 750, 637, 480, 375, 982, 'about__pic_mobile')
+            +pictureNew('about/about_bg', 'jpg', '', 1920, 1450, 1000, 1920, 1077, 'about__pic_wide')
+            +pictureNew('about/about_bg_mobile', 'jpg', '', 750, 600, 375, 375, 982, 'about__pic_mobile')
 
         .about__content
             .container
@@ -147,7 +147,7 @@ block page
                         article.recepies__item 
                             .recipes__pic 
                                 .label.recipes__label(class= item.labelClassName)= item.labelName
-                                +picture(item.imgUrl, 'jpg', 'x2')
+                                +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
 
                             .recipes__info
                                 .recipes__time 
@@ -242,7 +242,7 @@ block page
                             .news__pic
                                 if item.labelName
                                     .news__label= item.labelName
-                                +picture(item.imgUrl, 'jpg', 'x2')
+                                +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
 
                             time.news__time(datetime="2023-05-20T09:40") 20 мая 09:40
 
