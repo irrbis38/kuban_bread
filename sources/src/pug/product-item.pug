@@ -5,26 +5,26 @@ block head
     title Продукт
 block page
 
-    section.product_intro
-        .product_intro__bg
-            +pictureNew('product_intro/product_intro_bg', 'png', '', 1920, 1480, 1000, 1920, 945, 'product_intro')
+    section.intro_product
+        .intro_product__bg
+            +pictureNew('intro_product/intro_product_bg', 'png', '', 1920, 1450, 1000, 1920, 945, 'intro_product')
 
         .container
-            .product_intro__container
+            .intro_product__container
 
-                p.product_intro__label.label_cherry Классические
+                p.intro_product__label.label_cherry Классические
 
-                h1.product_intro__title 
+                h1.intro_product__title 
                     span Хрустящие
                     span с паприкой
 
-        .product_intro__images
+        .intro_product__images
 
-            .product_intro__images__wrapper
-                .product_intro__img
-                    +picture('product_intro/product_wide_1', 'jpg', 'x2')
-                .product_intro__img
-                    +picture('product_intro/product_wide_2', 'jpg', 'x2')
+            .intro_product__images__wrapper
+                .intro_product__img
+                    +pictureSize('intro_product/product_wide_1', 'jpg', 'x2', 958, 580)
+                .intro_product__img
+                    +pictureSize('intro_product/product_wide_2', 'jpg', 'x2', 476, 580)
 
 
     section.description
@@ -56,22 +56,22 @@ block page
 
                 li.ingredients__link 
                     .ingredients__img 
-                        +picture('ingredients/ingredients_1', 'png', 'x2')
+                        +pictureSize('ingredients/ingredients_1', 'png', 'x2', 340, 250)
                     p.ingredients__name Семена кунжута
 
                 li.ingredients__link 
                     .ingredients__img 
-                        +picture('ingredients/ingredients_2', 'png', 'x2')
+                        +pictureSize('ingredients/ingredients_2', 'png', 'x2', 340, 250)
                     p.ingredients__name Ржаная мука
 
                 li.ingredients__link 
                     .ingredients__img 
-                        +picture('ingredients/ingredients_3', 'png', 'x2')
+                        +pictureSize('ingredients/ingredients_3', 'png', 'x2', 340, 250)
                     p.ingredients__name Соль
 
                 li.ingredients__link 
                     .ingredients__img 
-                        +picture('ingredients/ingredients_4', 'png', 'x2')
+                        +pictureSize('ingredients/ingredients_4', 'png', 'x2', 340, 250)
                     p.ingredients__name Соль
 
 
@@ -150,7 +150,7 @@ block page
                     article.recepies__item 
                         .recipes__pic 
                             .label.recipes__label(class= item.labelClassName)= item.labelName
-                            +picture(item.imgUrl, 'jpg', 'x2')
+                            +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
 
                         .recipes__info
                             .recipes__time 
@@ -174,7 +174,7 @@ block page
         .production_more__bg
             img(src="./images/news/news_bg.png" alt="")
         .nutrients__bg_3
-            +picture('nutrients/nutrients_bg_3', 'png', 'x2')
+            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 465, 325)
 
 
         .container

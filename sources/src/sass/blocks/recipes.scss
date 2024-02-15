@@ -260,3 +260,81 @@
     margin-bottom: 230px;
   }
 }
+
+// recepies page
+.recepies-page {
+  .recipes {
+    margin-bottom: 247px;
+    padding: 155px 0 0;
+
+    @include lg {
+      margin-bottom: 150px;
+    }
+
+    @include xs {
+      margin-bottom: 64px;
+      padding-top: 121px;
+    }
+  }
+
+  .recipes__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 29px;
+    margin-bottom: 84px;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xs {
+      grid-template-columns: 1fr;
+      gap: 33px 29px;
+      margin-bottom: 36px;
+    }
+  }
+
+  .recepies__item {
+    &:nth-child(n) {
+      grid-column-start: unset;
+      grid-column-end: unset;
+    }
+  }
+
+  .recepies__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 30px;
+
+    // @include xs {
+    //   margin-bottom: 40px;
+    // }
+  }
+
+  .recipes__buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 31px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    @include xs {
+      display: flex;
+      margin-right: -20px;
+      margin-bottom: 35px;
+
+      &::after {
+        content: "|";
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .recipes_btn {
+    scroll-snap-align: start;
+  }
+}

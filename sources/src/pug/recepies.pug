@@ -1,153 +1,115 @@
 extends base/_layout
 block vars
-    - var pageName = 'recepies'
+    - var pageName = 'recepies-page'
 block head
     title Рецепты
 block page
 
-    section.presentation_intro
-        .presentation_intro__bg
-            +pictureNew('presentation/presentation_bg', 'png', '', 1920, 1500, 800, 1920, 945, 'presentation_intro__pic_wide')
-            +pictureNew('presentation/presentation_bg_mobile', 'jpg', '', 750, 568, 461, 700, 375, 'presentation_intro__pic_mobile')
+    section.intro_presentation
+        .intro_presentation__bg
+            +pictureNew('intro_recepies/recepies_intro_bg', 'jpg', '', 1920, 1450, 1000, 1920, 945, 'intro_presentation__pic_wide')
+            +pictureNew('intro_recepies/recepies_intro_bg_mobile', 'jpg', '', 750, 600, 375, 700, 375, 'intro_presentation__pic_mobile')
 
-        .presentation_intro__content
-            .container.presentation_intro__container
+        .intro_presentation__content
+            .container.intro_presentation__container
 
-                h1.presentation_intro__title.block__title Продукция
+                h1.intro_presentation__title.block__title Продукция
 
-                p.presentation_intro__subtitle.block__subtitle
-                    span Каждый найдет, что-то для
-                    span себя на #[span.line_bg каждый день!]
+                p.intro_presentation__subtitle.block__subtitle
+                    span Удивляйте себя #[span.line_bg каждый день]
+                    span новыми вкусовыми сочетаниями!
 
-                p.presentation_intro__subtitle_mobile.block__subtitle_mobile
+                p.intro_presentation__subtitle_mobile.block__subtitle_mobile
                     span Удивляйте себя 
                     span #[span.line_bg новыми вкусовыми]
                     span сочетаниями! 
 
-                p.presentation_intro__text Наша компания началась с идеи создать здоровый продукт. И нам удалось воплотить ее в жизнь! Мы производим линейки хлебцев: Традиционная, Лайт, ФитнесЛайн, Бородинские
+                p.intro_presentation__text Ищете больше рецептов? Мы поразим ваше воображение палитрой вкусов, которые помогут вам насладиться нашей продукцией  в полной мере.
 
 
-    .goods 
-        -
-            var filters = [
-                {
-                    name: 'Все',
-                    class: 'btn_grey'
-                },
-                {
-                    name: 'Классические',
-                    class: 'btn_cherry'
-                },
-                {
-                    name: 'Цельнозерновые',
-                    class: 'btn_green_light'
-                },
-                {
-                    name: 'Идеальная формула',
-                    class: 'btn_violet'
-                },
-                {
-                    name: 'Безглютеновые',
-                    class: 'btn_green_deep'
-                },
-                {
-                    name: 'Фруктовые',
-                    class: 'btn_red_carrot'
-                },
-                {
-                    name: 'Сухие завтраки',
-                    class: 'btn_carrot'
-                },
-                {
-                    name: 'Отруби',
-                    class: 'btn_blue_dark'
-                },
-                {
-                    name: '|',
-                    class: 'btn_last_child'
-                }
-            ]
-
-        .goods__top
-            .goods__filters.hidescrollbar
-                each filter in filters
-
-                    button.goods__btn.btn_label(class= filter.class type="button")= filter.name
-
+    .recipes
         .container
+            .recipes__wrapper
+                .recepies__top
+                    .recipes__buttons.hidescrollbar
+                        button.recipes_btn.btn_label.btn_grey(type="button") Все
+                        button.recipes_btn.btn_label.btn_blue(type="button") Классические
+                        button.recipes_btn.btn_label.btn_green(type="button") Вегетарианские
+                        button.recipes_btn.btn_label.btn_orange(type="button") Десертные
+
             -
-                var goods_data = [
+                var recipes_data = [
                     {
-                        labelClass: 'label_cherry',
+                        labelClassName: 'label_green',
+                        labelName: 'Вегетарианские',
+                        imgUrl: 'recipes/recipes_1'
+                    },
+                    {
+                        labelClassName: 'label_blue',
                         labelName: 'Классические',
-                        imgUrl: 'goods/goods_1',
-                        name: 'Хлебцы Хрустящие Классические бутербродные'
+                        imgUrl: 'recipes/recipes_2'
                     },
                     {
-                        labelClass: 'label_cherry',
+                        labelClassName: 'label_orange',
+                        labelName: 'Десертные',
+                        imgUrl: 'recipes/recipes_3'
+                    },
+                    {
+                        labelClassName: 'label_orange',
+                        labelName: 'Десертные',
+                        imgUrl: 'recipes/recipes_3'
+                    },
+                    {
+                        labelClassName: 'label_green',
+                        labelName: 'Вегетарианские',
+                        imgUrl: 'recipes/recipes_1'
+                    },
+                    {
+                        labelClassName: 'label_blue',
                         labelName: 'Классические',
-                        imgUrl: 'goods/goods_2',
-                        name: 'Хлебцы Хрустящие Классические с луком'
+                        imgUrl: 'recipes/recipes_2'
                     },
                     {
-                        labelClass: 'label_green_light',
-                        labelName: 'Цельнозерновые',
-                        imgUrl: 'goods/goods_3',
-                        name: 'Хлебцы Хрустящие Цельнозерновые с чесноком'
+                        labelClassName: 'label_green',
+                        labelName: 'Вегетарианские',
+                        imgUrl: 'recipes/recipes_1'
                     },
                     {
-                        labelClass: 'label_green_light',
-                        labelName: 'Цельнозерновые',
-                        imgUrl: 'goods/goods_4',
-                        name: 'Хлебцы Хрустящие Цельнозерновые овсяные'
+                        labelClassName: 'label_blue',
+                        labelName: 'Классические',
+                        imgUrl: 'recipes/recipes_2'
                     },
                     {
-                        labelClass: 'label_violet',
-                        labelName: 'Идеальная формула',
-                        imgUrl: 'goods/goods_5',
-                        name: 'Хлебцы Хрустящие “Идеальная формула” с льном и кунжутом'
-                    },
-                    {
-                        labelClass: 'label_green_deep',
-                        labelName: 'Безглютеновые',
-                        imgUrl: 'goods/goods_6',
-                        name: 'Хлебцы Хрустящие Безглютеновые гречнево-рисовые с нутом'
-                    },
-                    {
-                        labelClass: 'lable_red_carrot',
-                        labelName: 'Фруктовые',
-                        imgUrl: 'goods/goods_7',
-                        name: 'Хлебцы Хрустящие Фруктовые с апельсином и корицей'
-                    },
-                    {
-                        labelClass: 'label_carrot',
-                        labelName: 'Сухие завтраки',
-                        imgUrl: 'goods/goods_8',
-                        name: 'Подушечки с начинкой “Карамель”'
-                    },
-                    {
-                        labelClass: 'label_blue_dark',
-                        labelName: 'Отруби',
-                        imgUrl: 'goods/goods_9',
-                        name: 'Отруби ржаные “Идеальная формула”'
+                        labelClassName: 'label_orange',
+                        labelName: 'Десертные',
+                        imgUrl: 'recipes/recipes_3'
                     }
                 ]
 
-            .goods__wrapper
+            .recipes__list
 
-                each good in goods_data
+                each item in recipes_data
 
-                    .goods__item 
-                        .goods__pic
-                            .goods__label.label(class= good.labelClass)= good.labelName
-                            +picture(good.imgUrl, 'png', 'x2')
+                    article.recepies__item 
+                        .recipes__pic 
+                            .label.recipes__label(class= item.labelClassName)= item.labelName
+                            +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
 
-                        .goods__name= good.name
+                        .recipes__info
+                            .recipes__time 
+                                .recipes__icon
+                                    img(src="./images/time.svg" alt="")
+                                span.recipes__value 20 минут
+                            .recipes__level
+                                .recipes__icon
+                                    img(src="./images/hat.svg" alt="")
+                                span.recipes__value Средняя сложность
 
-                        a.btn.goods__more(href="#") Подробнее
+                        h3.recipes__name Хлебцы с рикоттой, клубничным вареньем и клубникой
 
+                        a.btn.recipes__show_more(href="#") Подробнее
 
-            button.btn.recipes__all(type="button") Загрузить еще
+            a.btn.recipes__all(href="#") Загрузить ещё
 
 
 
