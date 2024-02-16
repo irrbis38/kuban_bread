@@ -1,0 +1,87 @@
+extends base/_layout
+block vars
+    - var pageName = 'news-page'
+block head
+    title Новости
+block page
+
+    section.news
+        .container
+            h2.news__title
+                span Новости компании
+                span Новости
+
+            .news__subtitle Будьте в курсе последних событий нашей компании: актуальные новости, обзор новинок продукции, вкуснейшие рецепты, выставки, презентации 
+
+            .news__filter_wrapper
+                .news__filter.hidescrollbar
+                    button.news__btn.active(type="button") Все
+                    button.news__btn(type="button") 2007
+                    button.news__btn(type="button") 2008
+                    button.news__btn(type="button") 2009
+                    button.news__btn(type="button") 2010
+
+            .news__wrapper
+
+                -
+                    var news_data = [
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_1'
+                        },
+                        {
+                            labelClassName: 'label_blue',
+                            imgUrl: 'news/news_2'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_3'
+                        },
+                        {
+                            labelClassName: 'label_blue',
+                            imgUrl: 'news/news_2'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_3'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_1'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_3'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_1'
+                        },
+                        {
+                            labelName: 'Десерт',
+                            imgUrl: 'news/news_2'
+                        }
+                    ]
+
+                .news__list
+
+                    each item in news_data
+
+                        article.recepies__item 
+                            .news__pic
+                                if item.labelName
+                                    .news__label= item.labelName
+                                +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
+
+                            time.news__time(datetime="2023-05-20T09:40") 20 мая 09:40
+
+                            h3.news__name Здоровый BATTLE" Наталья Зубарева VS Саша Зверева
+
+                            p.news__text Не для кого не секрет, что наша компания ООО "Кубанские Хлебцы" со всей ответственностью подходит к своему делу гарантирует качество в каждой упаковке.
+
+                            a.btn.news__show_more(href="#") Подробнее
+
+                a.btn.news__all(href="#") Больше новостей
+
+
+    include ./blocks/_feedback
