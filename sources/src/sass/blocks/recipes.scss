@@ -338,3 +338,43 @@
     scroll-snap-align: start;
   }
 }
+
+// recipe-item-page
+
+.recipe-item-page {
+  .recipes {
+    padding: 248px 0 0;
+
+    @include lg {
+      padding: 120px 0 0;
+    }
+
+    @include xs {
+      padding: 103px 0 0;
+    }
+  }
+
+  .recipes__title {
+    margin-bottom: 31px;
+
+    @include xs {
+      margin-bottom: 27px;
+    }
+  }
+
+  .recipes__subtitle {
+    margin-bottom: 33px;
+
+    @include xs {
+      margin-bottom: 27px;
+    }
+  }
+
+  .recipes__descr {
+    margin: 0 auto 51px;
+
+    @include xs {
+      margin: 0 auto 83px;
+    }
+  }
+}

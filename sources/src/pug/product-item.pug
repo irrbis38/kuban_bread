@@ -109,64 +109,7 @@ block page
                     span 1 чайная ложка
 
 
-    section.recipes
-        .container 
-            h2.recipes__title.block__title Рецепты
-
-            p.recipes__subtitle.block__subtitle Продолжить знакомство
-
-            p.recipes__descr.block__descr Ищете другие рецепты? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться нашими продуктами в полной мере.
-
-
-            .recipes__wrapper 
-                .recipes__buttons
-                    button.recipes_btn.btn_label.btn_blue(type="button") Классические
-                    button.recipes_btn.btn_label.btn_green(type="button") Вегетарианские
-                    button.recipes_btn.btn_label.btn_orange(type="button") Десертные
-
-            -
-                var recipes_data = [
-                    {
-                        labelClassName: 'label_green',
-                        labelName: 'Вегетарианские',
-                        imgUrl: 'recipes/recipes_1'
-                    },
-                    {
-                        labelClassName: 'label_blue',
-                        labelName: 'Классические',
-                        imgUrl: 'recipes/recipes_2'
-                    },
-                    {
-                        labelClassName: 'label_orange',
-                        labelName: 'Десертные',
-                        imgUrl: 'recipes/recipes_3'
-                    }
-                ]
-
-            .recipes__list
-
-                each item in recipes_data
-
-                    article.recepies__item 
-                        .recipes__pic 
-                            .label.recipes__label(class= item.labelClassName)= item.labelName
-                            +pictureSize(item.imgUrl, 'jpg', 'x2', 465, 325)
-
-                        .recipes__info
-                            .recipes__time 
-                                .recipes__icon
-                                    img(src="./images/time.svg" alt="")
-                                span.recipes__value 20 минут
-                            .recipes__level
-                                .recipes__icon
-                                    img(src="./images/hat.svg" alt="")
-                                span.recipes__value Средняя сложность
-
-                        h3.recipes__name Хлебцы с рикоттой, клубничным вареньем и клубникой
-
-                        a.btn.recipes__show_more(href="#") Подробнее
-
-            a.btn.recipes__all(href="#") Больше рецептов
+    include ./blocks/_recepies-block
 
 
 
