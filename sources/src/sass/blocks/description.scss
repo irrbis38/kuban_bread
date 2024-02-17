@@ -87,3 +87,21 @@
     }
   }
 }
+
+// news-item-page
+
+.news-item-page {
+  .description__social {
+    &:not(:first-child) {
+      margin-top: 114px;
+    }
+
+    @include xs {
+      justify-content: flex-start;
+
+      &:not(:first-child) {
+        margin-top: 36px;
+      }
+    }
+  }
+}

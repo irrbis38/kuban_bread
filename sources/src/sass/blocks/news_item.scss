@@ -1,0 +1,276 @@
+.news_item {
+  position: relative;
+  min-width: 320px;
+  margin-bottom: 210px;
+
+  @include xs {
+    min-height: 521px;
+    margin-bottom: 88px;
+  }
+}
+
+.news_item__container {
+  max-width: 958px;
+  margin: 0 auto;
+  padding: 180px 0 24px;
+
+  @include lg {
+    padding: 180px 0 60px;
+  }
+
+  @include xs {
+    padding: 174px 0 20px;
+  }
+}
+
+.news_item__label {
+  width: max-content;
+  margin: 0 auto 44px;
+  padding: 9px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $color_brown;
+  white-space: nowrap;
+  border-radius: 8px;
+
+  @include xs {
+    margin: 0 auto 21px 0;
+  }
+}
+
+.news_item__title {
+  margin-bottom: 36px;
+  text-align: center;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 67%;
+  text-align: center;
+  color: $color_brown;
+
+  span {
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  @include lg {
+    font-size: 80px;
+    line-height: 1;
+
+    span {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  @include xs {
+    margin-bottom: 13px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 122%;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+.news_item__time {
+  display: block;
+  margin: 0 auto 38px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #989898;
+
+  @include xs {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+}
+
+.news_item__pic {
+  position: relative;
+  min-height: 219px;
+
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 60.54%;
+  }
+
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include xs {
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.news_item__text {
+  &:not(:last-child) {
+    margin-bottom: 42px;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6f6f6f;
+  }
+
+  @include xs {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 143%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.news_item__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 55px;
+  border-radius: 15px;
+  overflow: hidden;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xs {
+    margin-bottom: 22px;
+    border-radius: 5px;
+  }
+}
+
+.news_item__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 73.65%;
+  }
+
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news_item__wrapper {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 209px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 59.5%;
+  }
+
+  &:not(:first-child) {
+    margin-top: 58px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 58px;
+  }
+
+  @include xs {
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.news_item__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.news_item__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    display: block;
+    width: 120px;
+    height: 120px;
+  }
+
+  @include xs {
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

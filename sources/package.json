@@ -56,5 +56,8 @@
         "not dead",
         "IE >= 10",
         "iOS >= 7"
-    ]
+    ],
+    "dependencies": {
+        "superagent": "^8.1.2"
+    }
 }
