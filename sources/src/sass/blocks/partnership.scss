@@ -1,0 +1,153 @@
+.partnership {
+  position: relative;
+  min-width: 320px;
+  background-color: #f5f7f9;
+  padding: 180px 0 243px;
+
+  @include lg {
+    padding: 180px 0 180px;
+  }
+
+  @include xs {
+    min-height: 521px;
+    padding: 174px 0 110px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.partnership__container {
+  max-width: 956px;
+  margin: 0 auto;
+}
+
+.partnership__bg_left,
+.partnership__bg_right {
+  position: absolute;
+  z-index: 1;
+
+  picture,
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.partnership__bg_left {
+  left: 0;
+  top: 300px;
+  width: 21.3%;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.partnership__bg_right {
+  top: 95px;
+  right: 0;
+  width: 18.85%;
+
+  @include xs {
+    display: none;
+  }
+}
+
+.partnership__title {
+  width: max-content;
+  margin: 0 auto 44px;
+  padding: 9px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $color_white;
+  background-color: #85b7df;
+  white-space: nowrap;
+  border-radius: 8px;
+
+  @include xs {
+    margin: 0 auto 21px 0;
+  }
+}
+
+.partnership__subtitle {
+  margin-bottom: 41px;
+  text-align: center;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 67%;
+  text-align: center;
+  color: #198cca;
+
+  & > span {
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  .line_bg {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 13px;
+      right: -2%;
+      z-index: -1;
+      width: 104%;
+      height: 24px;
+      border-radius: 5px;
+      background-color: #d6def8;
+      pointer-events: none;
+    }
+  }
+
+  @include lg {
+    font-size: 80px;
+    line-height: 1;
+
+    & > span {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  @include xs {
+    margin-bottom: 32px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 122%;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+.partnership__descr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: #35383f;
+
+  p:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  @include xs {
+    font-size: 14px;
+    line-height: 1.43;
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

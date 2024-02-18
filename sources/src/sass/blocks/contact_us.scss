@@ -1,0 +1,176 @@
+.contact_us {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 250px 0 225px;
+  background-color: $color_brown_light;
+
+  @include xl {
+    padding: 200px 0;
+  }
+
+  @include lg {
+    padding: 150px 0;
+  }
+
+  @include xs {
+    margin-bottom: 62px;
+    padding: 140px 0 70px;
+  }
+}
+
+.contact_us__bg {
+  position: absolute;
+  top: -64px;
+  left: 23.38%;
+  z-index: 1;
+  width: 15.83%;
+  min-width: 280px;
+  height: auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include sm {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1;
+    width: 37%;
+  }
+
+  @include xs {
+    min-width: unset;
+    width: 55%;
+    left: unset;
+    right: -45px;
+    top: -10px;
+  }
+}
+
+.contact_us__title {
+  font-size: 88px;
+  margin-bottom: 34px;
+  color: $color_brown;
+
+  @include lg {
+    font-size: 100px;
+  }
+
+  @include sm {
+    font-size: 80px;
+  }
+
+  @include xs {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 54px;
+    line-height: 119%;
+    text-align: center;
+    color: $color_brown;
+  }
+}
+
+.contact_us__text {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #35383f;
+
+  @include xs {
+    display: none;
+  }
+}
+
+.contact_us__form {
+  max-width: 711px;
+  margin: 0 auto;
+}
+
+.contact_us__fieldset {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 31px;
+  padding: 0;
+
+  @include xs {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+    margin-bottom: 24px;
+  }
+}
+
+.contact_us__input {
+  min-height: 54px;
+
+  @include xs {
+    min-height: 64px;
+  }
+}
+
+.contact_us__textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-height: 140px;
+  resize: none;
+
+  @include xs {
+    grid-column-end: 2;
+    min-height: 197px;
+  }
+}
+
+.contact_us__input,
+.contact_us__textarea {
+  padding: 6px 24px 8px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $color_black;
+  background-color: $color_white;
+  border: 2px solid #ffe2cd;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
+}
+
+.contact_us__submit {
+  margin: 0 auto 20px;
+}
+
+.contact_us__policy {
+  max-width: 231px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  text-align: center;
+  color: #aeaeae;
+  opacity: 0.5;
+
+  a {
+    transition: color 0.2s ease-out;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color_black;
+      }
+    }
+  }
+}
+
+.partnership-page main {
+  overflow: hidden;
+}

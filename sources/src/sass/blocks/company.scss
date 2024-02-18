@@ -1,0 +1,162 @@
+.company {
+  padding: 188px 0 241px;
+  background-color: #e8eaed;
+  background-image: url("../images/company/company_bg_lg.jpg");
+  background-image: image-set(
+    url("../images/company/company_bg_lg.webp") type("image/webp") 1x,
+    url("../images/company/company_bg_lg@2x.webp") type("image/webp") 2x,
+    url("../images/company/company_bg_lg.jpg") type("image/jpg") 1x,
+    url("../images/company/company_bg_lg@2x.jpg") type("image/jpg") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 87.81% auto;
+
+  @include lg {
+    padding: 188px 0 141px;
+    background-size: 100% auto;
+  }
+
+  @include xs {
+    padding: 90px 0 506px;
+    background-image: url("../images/company/company_bg_xs.jpg");
+    background-image: image-set(
+      url("../images/company/company_bg_xs.webp") type("image/webp") 1x,
+      url("../images/company/company_bg_xs@2x.webp") type("image/webp") 2x,
+      url("../images/company/company_bg_xs.jpg") type("image/jpg") 1x,
+      url("../images/company/company_bg_xs@2x.jpg") type("image/jpg") 2x
+    );
+    background-position: left 420px;
+    background-size: 100% auto;
+  }
+
+  @include xxs {
+    background-position: left bottom;
+  }
+
+  @include r(359px) {
+    padding-bottom: 400px;
+  }
+}
+
+.company__title {
+  margin-bottom: 40px;
+  text-align: left;
+  color: #4eaee3;
+
+  @include xs {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.company__subtitle {
+  max-width: 580px;
+  margin-bottom: 40px;
+  text-align: left;
+  color: #178dcd;
+}
+
+.company__descr {
+  max-width: 465px;
+  margin-bottom: 188px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #35383f;
+
+  p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @include lg {
+    margin-bottom: 88px;
+  }
+
+  @include xs {
+    margin: 0 auto 115px;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.company__indicators {
+  display: flex;
+  gap: 0 153px;
+
+  @include lg {
+    gap: 0 50px;
+  }
+
+  @include xs {
+    display: block;
+  }
+}
+
+.company__indicators_item {
+  flex: 0 1 341px;
+
+  @include xs {
+    flex: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 335px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+.company__value {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 1;
+  color: #178dcd;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 105%;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #4eaee3;
+    opacity: 0.35;
+  }
+
+  @include xs {
+    margin-bottom: 19px;
+    text-align: center;
+  }
+}
+
+.company__subvalue {
+  margin-left: 5px;
+  font-size: 48px;
+}
+
+.company__name {
+  display: inline-block;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #35383f;
+
+  @include xs {
+    text-align: center;
+  }
+}

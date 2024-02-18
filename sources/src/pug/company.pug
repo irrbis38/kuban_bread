@@ -1,0 +1,110 @@
+extends base/_layout
+block vars
+    - var pageName = 'company-page'
+block head
+    title Компания
+block page
+
+    section.intro 
+        .intro__slider.swiper
+            .intro__wrapper.swiper-wrapper
+
+                - var count = [1, 2, 3]
+
+                each num in count
+
+                    .intro__slide.swiper-slide
+                        .intro__bg
+                            +pictureNew('intro/intro_bg', 'jpg', '', 1920, 1450, 1000, 1920, 945, 'intro__pic_wide')
+                            +pictureNew('intro/intro_bg_mobile', 'jpg', '', 750, 600, 375, 700, 375, 'intro__pic_mobile')
+                        .intro__content
+                            .container.intro__container
+                                h1.intro__title ООО Кубанские хлебцы
+                                p.intro__subtitle Вкусная польза с заботой о здоровье
+                                p.intro__text Наши хлебцы изготовлены из натуральных компонентов, не вредят окружающей среде и очень хрустящие!
+
+            .intro__paggination.swiper-pagination
+
+
+
+    .company
+        .container
+
+            h2.company__title.block__title О компании
+
+            p.company__subtitle.block__subtitle Расскажем о#[br] нашей компании
+
+            .company__descr 
+                p Наша компания началась с идеи создать здоровый продукт. И нам удалось воплотить ее в жизнь! Мы производим линейки хлебцев: Традиционная, Лайт, ФитнесЛайн, Бородинские, Пикантэ, Leпёшка, Greniki, Мультизлаковые, Овощные, Нутово - кукурузные, пшенично - кукурузные.
+
+                p В качестве сырья мы используем натуральные ингредиенты и применяем собственные технологии производства наряду с европейскими.
+
+            ul.company__indicators
+
+                li.company__indicators_item 
+                    span.company__value 13#[span.company__subvalue лет]
+                    span.company__name Радуем покупателей нашей продукции качеством, вкусом и бла бла бла
+
+                li.company__indicators_item 
+                    span.company__value 17
+                    span.company__name Уникальных вкусов в линейке наших продуктов
+
+                li.company__indicators_item 
+                    span.company__value 17
+                    span.company__name Уникальных вкусов в линейке наших продуктов
+
+
+    section.awards
+        .awards__bg
+            img(src="./images/news/news_bg.png" alt="")
+        .nutrients__bg_3.awards__bg_3
+            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 465, 325)
+
+        .container 
+
+            h2.awards__title Наши награды
+
+            p.awards__subtitle Ищете другие рецепты? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться продуктами Wasa в полной мере.
+
+            - var  a_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+            ul.awards__list
+
+                each item in a_list 
+
+                    li.awards__item 
+                        +pictureSize('awards/awards_1', 'png', 'x2', 124, 124)
+
+            button.btn.awards__more(type="button") Загрузить ещё
+
+
+
+    section.sertificats
+
+        .container 
+
+            h2.sertificats__title Сертификаты
+
+            p.sertificats__subtitle Ищете другие рецепты? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться продуктами Wasa в полной мере.
+
+            - var  s_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+            ul.sertificats__list
+
+                each item in s_list 
+
+                    li.sertificats__item 
+                        +pictureSize('sertificats/sertificat', 'jpg', 'x2', 217, 298)
+
+            button.btn.awards__more(type="button") Загрузить ещё
+
+
+
+
+
+
+
+
+    include ./blocks/_where_to_buy_block
+
+    include ./blocks/_feedback

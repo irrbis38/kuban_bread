@@ -191,3 +191,15 @@
     }
   }
 }
+
+// company-page
+
+.company-page {
+  .where_to_buy {
+    padding: 31px 0 170px;
+
+    @include xs {
+      padding: 31px 0 73px;
+    }
+  }
+}

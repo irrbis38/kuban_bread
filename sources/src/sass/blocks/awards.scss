@@ -1,0 +1,158 @@
+.awards {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 231px 0 194px;
+
+  @include xl {
+    padding: 200px 0;
+  }
+
+  @include lg {
+    padding: 150px 0;
+  }
+
+  @include xs {
+    padding: 114px 0 28px;
+  }
+}
+
+.awards__bg {
+  position: absolute;
+  top: -67px;
+  left: 12.27%;
+  z-index: 1;
+  width: 15.83%;
+  min-width: 280px;
+  height: auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include sm {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1;
+    width: 37%;
+  }
+
+  @include xs {
+    min-width: unset;
+    display: none;
+  }
+}
+
+.nutrients__bg_3.awards__bg_3 {
+  @include xs {
+    display: none;
+  }
+}
+
+.awards__title {
+  font-family: $font_title;
+  font-size: 88px;
+  font-weight: 400;
+  margin-bottom: 26px;
+  text-align: center;
+  color: $color_brown;
+
+  @include lg {
+    font-size: 100px;
+  }
+
+  @include sm {
+    font-size: 80px;
+  }
+
+  @include xs {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 54px;
+    line-height: 119%;
+    text-align: center;
+    color: $color_brown;
+  }
+}
+
+.awards__subtitle {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+  color: #35383f;
+
+  @include xs {
+    margin: 0 auto 51px;
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+
+.awards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 46px 65px;
+  margin-bottom: 32px;
+
+  @include xs {
+    gap: 71px;
+    margin-bottom: 29px;
+  }
+}
+
+.awards__item {
+  width: 124px;
+  height: 124px;
+
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include xs {
+    width: 132px;
+    height: 132px;
+
+    &:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
+.awards__more {
+  display: none;
+  width: max-content;
+  margin: 0 auto;
+  background-color: $color_blue;
+  border: 2px solid $color_blue;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      // background-color: $color_blue_hover;
+      color: $color_blue;
+      background-color: $color_white;
+    }
+  }
+
+  @include xs {
+    display: block;
+    width: 100%;
+  }
+}
