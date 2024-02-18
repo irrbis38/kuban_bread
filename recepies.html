@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Рецепты</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="ООО Кубанские хлебцы">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/noto-sans-v35-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/noto-sans-v35-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/noto-sans-v35-cyrillic_latin-600.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/neucha-v17-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body class="recepies-page">
+    <header class="header">
+      <div class="container header__container">
+        <button class="header__burger_btn" type="button" aria-label="Открыть меню"><span class="header__icon"><span></span></span></button>
+        <nav class="header__nav"> 
+          <ul class="header__list"> 
+            <li><a href="./index.html">Главная </a></li>
+            <li><a href="./company.html">О компании</a></li>
+            <li><a href="./news.html">Новости</a></li>
+            <li><a href="./products.html">Продукция</a></li>
+            <li><a href="./recepies.html">Рецепты</a></li>
+            <li><a href="./partnership.html">Партнеры</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__lang_wrapper">
+          <button class="header__lang" type="button"><span>Русский (RU)</span>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.0868 16.3335C19.1802 15.5635 19.2502 14.7935 19.2502 14.0002C19.2502 13.2068 19.1802 12.4368 19.0868 11.6668H23.0302C23.2168 12.4135 23.3335 13.1952 23.3335 14.0002C23.3335 14.8052 23.2168 15.5868 23.0302 16.3335M17.0218 22.8202C17.7218 21.5252 18.2585 20.1252 18.6318 18.6668H22.0735C20.9535 20.5918 19.1685 22.0852 17.0218 22.8202ZM16.7302 16.3335H11.2702C11.1535 15.5635 11.0835 14.7935 11.0835 14.0002C11.0835 13.2068 11.1535 12.4252 11.2702 11.6668H16.7302C16.8352 12.4252 16.9168 13.2068 16.9168 14.0002C16.9168 14.7935 16.8352 15.5635 16.7302 16.3335ZM14.0002 23.2868C13.0318 21.8868 12.2502 20.3352 11.7718 18.6668H16.2285C15.7502 20.3352 14.9685 21.8868 14.0002 23.2868ZM9.3335 9.3335H5.92683C7.03516 7.39683 8.83183 5.9035 10.9668 5.18016C10.2668 6.47516 9.74183 7.87516 9.3335 9.3335ZM5.92683 18.6668H9.3335C9.74183 20.1252 10.2668 21.5252 10.9668 22.8202C8.83183 22.0852 7.03516 20.5918 5.92683 18.6668ZM4.97016 16.3335C4.7835 15.5868 4.66683 14.8052 4.66683 14.0002C4.66683 13.1952 4.7835 12.4135 4.97016 11.6668H8.9135C8.82016 12.4368 8.75016 13.2068 8.75016 14.0002C8.75016 14.7935 8.82016 15.5635 8.9135 16.3335M14.0002 4.70183C14.9685 6.10183 15.7502 7.66516 16.2285 9.3335H11.7718C12.2502 7.66516 13.0318 6.10183 14.0002 4.70183ZM22.0735 9.3335H18.6318C18.2585 7.87516 17.7218 6.47516 17.0218 5.18016C19.1685 5.91516 20.9535 7.39683 22.0735 9.3335ZM14.0002 2.3335C7.5485 2.3335 2.3335 7.5835 2.3335 14.0002C2.3335 17.0944 3.56266 20.0618 5.75058 22.2497C6.83393 23.3331 8.12006 24.1925 9.53552 24.7788C10.951 25.3651 12.4681 25.6668 14.0002 25.6668C17.0944 25.6668 20.0618 24.4377 22.2497 22.2497C24.4377 20.0618 25.6668 17.0944 25.6668 14.0002C25.6668 12.4681 25.3651 10.951 24.7788 9.53552C24.1925 8.12006 23.3331 6.83393 22.2497 5.75058C21.1664 4.66723 19.8803 3.80787 18.4648 3.22157C17.0493 2.63526 15.5323 2.3335 14.0002 2.3335Z" fill="#002F6C"></path>
+            </svg>
+          </button>
+          <div class="header__switch_lang">
+            <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 4.5L5 1L9 4.5" stroke="#002F6C" stroke-linecap="round"></path>
+            </svg>
+            <fieldset class="header__fieldset">
+              <label class="header__label" data-lang="Русский (RU)">
+                <input type="radio" name="lang" value="ru" checked><span class="header__radio_fake"></span><span class="header__radio_text">Русский (RU)</span>
+              </label>
+              <label class="header__label" data-lang="English (EN)">
+                <input type="radio" name="lang" value="en"><span class="header__radio_fake"></span><span class="header__radio_text">English (EN)</span>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro_presentation">
+        <div class="intro_presentation__bg">
+          <picture class="intro_presentation__pic_wide">
+            <source sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/intro_recepies/recepies_intro_bg_1000.webp 1000w, images/intro_recepies/recepies_intro_bg_1450.webp 1450w, images/intro_recepies/recepies_intro_bg_1920.webp 1920w" type="image/webp"/><img src="images/intro_recepies/recepies_intro_bg_1920.jpg" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/intro_recepies/recepies_intro_bg_1000.jpg 1000w, images/intro_recepies/recepies_intro_bg_1450.jpg 1450w, images/intro_recepies/recepies_intro_bg_1920.jpg 1920w" alt="" width="1920" height="945"/>
+          </picture>
+          <picture class="intro_presentation__pic_mobile">
+            <source sizes="(max-width: 750px) 100vw, 750px" srcset="images/intro_recepies/recepies_intro_bg_mobile_375.webp 375w, images/intro_recepies/recepies_intro_bg_mobile_600.webp 600w, images/intro_recepies/recepies_intro_bg_mobile_750.webp 750w" type="image/webp"/><img src="images/intro_recepies/recepies_intro_bg_mobile_750.jpg" sizes="(max-width: 750px) 100vw, 750px" srcset="images/intro_recepies/recepies_intro_bg_mobile_375.jpg 375w, images/intro_recepies/recepies_intro_bg_mobile_600.jpg 600w, images/intro_recepies/recepies_intro_bg_mobile_750.jpg 750w" alt="" width="700" height="375"/>
+          </picture>
+        </div>
+        <div class="intro_presentation__content">
+          <div class="container intro_presentation__container">
+            <h1 class="intro_presentation__title block__title">Продукция</h1>
+            <p class="intro_presentation__subtitle block__subtitle"><span>Удивляйте себя <span class="line_bg">каждый день</span></span><span>новыми вкусовыми сочетаниями!</span></p>
+            <p class="intro_presentation__subtitle_mobile block__subtitle_mobile"><span>Удивляйте себя </span><span><span class="line_bg">новыми вкусовыми</span></span><span>сочетаниями! </span></p>
+            <p class="intro_presentation__text">Ищете больше рецептов? Мы поразим ваше воображение палитрой вкусов, которые помогут вам насладиться нашей продукцией  в полной мере.</p>
+          </div>
+        </div>
+      </section>
+      <div class="recipes">
+        <div class="container">
+          <div class="recipes__wrapper">
+            <div class="recepies__top">
+              <div class="recipes__buttons hidescrollbar">
+                <button class="recipes_btn btn_label btn_grey" type="button">Все</button>
+                <button class="recipes_btn btn_label btn_blue" type="button">Классические</button>
+                <button class="recipes_btn btn_label btn_green" type="button">Вегетарианские</button>
+                <button class="recipes_btn btn_label btn_orange" type="button">Десертные</button>
+              </div>
+            </div>
+          </div>
+          <div class="recipes__list">
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_green">Вегетарианские</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_1.webp, images/recipes/recipes_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_1.jpg" srcset="images/recipes/recipes_1.jpg, images/recipes/recipes_1@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_blue">Классические</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_2.webp, images/recipes/recipes_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_2.jpg" srcset="images/recipes/recipes_2.jpg, images/recipes/recipes_2@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_orange">Десертные</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_3.webp, images/recipes/recipes_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_3.jpg" srcset="images/recipes/recipes_3.jpg, images/recipes/recipes_3@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_orange">Десертные</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_3.webp, images/recipes/recipes_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_3.jpg" srcset="images/recipes/recipes_3.jpg, images/recipes/recipes_3@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_green">Вегетарианские</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_1.webp, images/recipes/recipes_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_1.jpg" srcset="images/recipes/recipes_1.jpg, images/recipes/recipes_1@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_blue">Классические</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_2.webp, images/recipes/recipes_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_2.jpg" srcset="images/recipes/recipes_2.jpg, images/recipes/recipes_2@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_green">Вегетарианские</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_1.webp, images/recipes/recipes_1@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_1.jpg" srcset="images/recipes/recipes_1.jpg, images/recipes/recipes_1@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_blue">Классические</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_2.webp, images/recipes/recipes_2@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_2.jpg" srcset="images/recipes/recipes_2.jpg, images/recipes/recipes_2@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+            <article class="recepies__item"> 
+              <div class="recipes__pic"> 
+                <div class="label recipes__label label_orange">Десертные</div>
+                <picture class="picture object-fit-cover">
+                  <source class="object-fit-cover" srcset="images/recipes/recipes_3.webp, images/recipes/recipes_3@2x.webp 2x" type="image/webp"/><img class="picture__img object-fit-cover" src="images/recipes/recipes_3.jpg" srcset="images/recipes/recipes_3.jpg, images/recipes/recipes_3@2x.jpg 2x" alt="" width="465" height="325" loading="lazy"/>
+                </picture>
+              </div>
+              <div class="recipes__info">
+                <div class="recipes__time"> 
+                  <div class="recipes__icon"><img src="./images/time.svg" alt=""></div><span class="recipes__value">20 минут</span>
+                </div>
+                <div class="recipes__level">
+                  <div class="recipes__icon"><img src="./images/hat.svg" alt=""></div><span class="recipes__value">Средняя сложность</span>
+                </div>
+              </div>
+              <h3 class="recipes__name">Хлебцы с рикоттой, клубничным вареньем и клубникой</h3><a class="btn recipes__show_more" href="#">Подробнее</a>
+            </article>
+          </div><a class="btn recipes__all" href="#">Загрузить ещё</a>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="container">
+          <h2 class="feedback__title block__title">Обратная связь</h2>
+          <p class="feedback__subtitle block__subtitle">Мы продолжаем удивлять</p>
+          <p class="feedback__descr block__descr">Мы постоянно продолжаем эксперементировать с новыми вкусами! От нас вы можете ждать самые неожиданные и в тоже время вкуснейшие сочетания вкусов.</p>
+          <p class="feedback__text">По вопросам качества</p><a class="feedback__phone" href="tel:88612050512">8 (861) 205-05-12</a>
+          <p class="feedback__text">Время работы: 9:00-18:00</p>
+          <button class="btn feedback__button" type="button">Обратная связь</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__copyright">© 2024 ООО  "Кубанские хлебцы"</p><a class="footer__created_by" href="https://art6.ru/" target="_blank"><img src="./images/art6.svg" alt="ART6"></a><a class="footer__policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
