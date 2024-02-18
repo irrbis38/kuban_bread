@@ -1,0 +1,112 @@
+.msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+  @include xxs {
+    align-items: flex-end;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.msg__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 20, 26, 0.2);
+  cursor: pointer;
+}
+
+.msg__modal {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 426px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 92px 20px;
+  background-color: $color_white;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+
+  @include xxs {
+    width: 100%;
+    max-height: 386px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.msg__inner {
+  width: 100%;
+}
+
+.msg__btn {
+  position: absolute;
+  top: 32px;
+  right: 44px;
+  z-index: 2;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.msg__title {
+  max-width: 410px;
+  margin: 0 auto 33px;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 91%;
+  text-align: center;
+  color: #002f6c;
+
+  @include xs {
+    font-size: 54px;
+  }
+}
+
+.msg__text {
+  max-width: 400px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #35383f;
+}

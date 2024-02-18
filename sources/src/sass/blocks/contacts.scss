@@ -1,0 +1,157 @@
+.contacts {
+  position: relative;
+  padding: 250px 0 241px;
+
+  @include lg {
+    padding: 200px 0;
+  }
+
+  @include xs {
+    padding: 160px 0 120px;
+  }
+}
+
+.contacts__title {
+  position: relative;
+  width: max-content;
+  margin: 0 auto 39px;
+  font-family: $font_title;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 95%;
+  text-align: center;
+  color: #198cca;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 12px;
+    left: -2%;
+    z-index: -1;
+    width: 104%;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #d6def8;
+  }
+
+  @include xs {
+    margin-left: 0;
+    margin-bottom: 20px;
+    font-size: 54px;
+    line-height: 148%;
+    text-align: left;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  max-width: 1920px;
+}
+
+.contacts__content {
+  width: 31.96%;
+
+  @include sm {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__group {
+  margin-bottom: 67px;
+
+  @include xs {
+    margin-bottom: 39px;
+  }
+}
+
+.contacts__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+
+  @include xs {
+    gap: 4px;
+  }
+}
+
+.contacts__name {
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #787e86;
+}
+
+.contacts__link,
+.contacts__text {
+  display: inline-block;
+  width: max-content;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.47;
+  color: #35383f;
+}
+
+.contacts__link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9f9f9f;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.contacts__text {
+  max-width: 80%;
+
+  @include xs {
+    max-width: 100%;
+  }
+}
+
+.contacts__phones {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+
+  .contacts__group {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62.08%;
+  height: 100%;
+
+  @include sm {
+    position: static;
+    width: 100%;
+    min-height: 360px;
+  }
+}
+
+// reset copyright of yandex map
+[class*="copyrights-pane"] {
+  display: none !important;
+}

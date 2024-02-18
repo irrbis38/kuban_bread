@@ -1,0 +1,41 @@
+section.contact_us
+
+    .contact_us__bg
+        img(src="./images/news/news_bg.png" alt="")
+    .nutrients__bg_3
+        +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 465, 325)
+
+
+    .container
+        h2.contact_us__title.block__subtitle Обратная связь
+
+        p.contact_us__text Оставьте свои данные - мы перезвоним и ответим на #[br]интересующие вас вопросы
+
+        form.contact_us__form(action="#")
+
+            fieldset.contact_us__fieldset
+
+                input.contact_us__input(type="text" name="user_name" placeholder="Ваше имя")
+
+                input.contact_us__input(type="text" name="user_phone" placeholder="Ваш телефон")
+
+                textarea.contact_us__textarea(name="user_message" placeholder="Сообщение" row="4")
+
+            
+            button.contact_us__submit.btn.btn_blue_dark(type="submit") Отправить данные
+
+            p.contact_us__policy Отправляя данные я соглашаюсь с #[a(href="#" target="_blank") политикой конфиденциальности]
+
+
+.msg
+    .msg__overlay.msg__close
+    .msg__modal 
+        .msg__inner
+            button.msg__btn.msg__close(type="button" aria-label="Закрыть окно")
+                svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M2 2L19 19" stroke="#002F6C" stroke-width="3" stroke-linecap="round")
+                    path(d="M19 2L2 19" stroke="#002F6C" stroke-width="3" stroke-linecap="round")
+
+            p.msg__title Ваша заявка отправлена
+
+            p.msg__text В ближайшее время с вами свяжется представитель нашей компании

@@ -270,6 +270,11 @@
   }
 }
 
+.header__fieldset {
+  border: none;
+  padding: 0;
+}
+
 .header__label {
   cursor: pointer;
   &:not(:last-child) {

@@ -7,13 +7,13 @@ header.header
 
         nav.header__nav 
             ul.header__list 
-                li: a(href="#") Главная 
-                li: a(href="#") О компании
-                li: a(href="#") Новости
-                li: a(href="#") Продукция
-                li: a(href="#") Рецепты
-                li: a(href="#") Партнеры
-                li: a(href="#") Контакты
+                li: a(href="./index.html") Главная 
+                li: a(href="./company.html") О компании
+                li: a(href="./news.html") Новости
+                li: a(href="./products.html") Продукция
+                li: a(href="./recepies.html") Рецепты
+                li: a(href="./partnership.html") Партнеры
+                li: a(href="./contacts.html") Контакты
 
 
         .header__lang_wrapper
@@ -26,7 +26,7 @@ header.header
             .header__switch_lang
                 svg(width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg")
                     path(d="M1 4.5L5 1L9 4.5" stroke="#002F6C" stroke-linecap="round")
-                form.header__form(action="#")
+                fieldset.header__fieldset
                     label.header__label(data-lang="Русский (RU)")
                         input(type='radio' name="lang" value="ru"  checked)
                         span.header__radio_fake

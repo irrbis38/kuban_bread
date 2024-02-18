@@ -171,6 +171,9 @@
   }
 }
 
-.partnership-page main {
-  overflow: hidden;
+.partnership-page,
+.contacts-page {
+  & main {
+    overflow: hidden;
+  }
 }

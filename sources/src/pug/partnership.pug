@@ -36,33 +36,10 @@ block page
                     p Например, солнечная батарея, производящая электроэнергию из возобновляемых источников вместо органических, помогает сократить выбросы парниковых газов на глобальном уровне. Количество выбросов парниковых газов, которых удалось избежать в рамках этого проекта, можно использовать для компенсации выбросов в результате деятельности, осуществляемой в другой стране. Финансирование этой системы зачетов обеспечивает долгое существование проекта солнечных батарей.
 
 
-    section.contact_us
-        .contact_us__bg
-            img(src="./images/news/news_bg.png" alt="")
-        .nutrients__bg_3
-            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 465, 325)
 
 
-        .container
-            h2.contact_us__title.block__subtitle Обратная связь
-
-            p.contact_us__text Оставьте свои данные - мы перезвоним и ответим на #[br]интересующие вас вопросы
-
-            form.contact_us__form(action="#")
-
-                fieldset.contact_us__fieldset
-
-                    input.contact_us__input(type="text" name="user_name" placeholder="Ваше имя")
-
-                    input.contact_us__input(type="text" name="user_phone" placeholder="Ваш телефон")
-
-                    textarea.contact_us__textarea(name="user_message" placeholder="Сообщение" row="4")
-
-                
-                button.contact_us__submit.btn.btn_blue_dark(type="submit") Отправить данные
-
-                p.contact_us__policy Отправляя данные я соглашаюсь с #[a(href="#" target="_blank") политикой конфиденциальности]
 
 
+    include ./blocks/contact_us_block
 
     include ./blocks/_feedback

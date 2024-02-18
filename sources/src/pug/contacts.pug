@@ -1,0 +1,70 @@
+extends base/_layout
+block vars
+    - var pageName = 'contacts-page'
+block head
+    title Контакты
+block page
+
+    section.contacts
+        .container 
+            h2.contacts__title Контакты
+
+        .contacts__wrapper 
+            .container.contacts__container
+
+                .contacts__content 
+
+                    .contacts__group 
+                        p.contacts__name Email общий
+
+                        .contacts__inner
+
+                            a.contacts__link(href="mailto:kub-hlebci@yandex.ru") kub-hlebci@yandex.ru
+
+
+                    .contacts__group 
+                        p.contacts__name Email отдела продаж
+
+                        .contacts__inner
+
+                            a.contacts__link(href="mailto:nop.hlebci@gmail.com") nop.hlebci@gmail.com 
+                            a.contacts__link(href="mailto:manager1@gmail.com") manager1@gmail.com 
+                            a.contacts__link(href="mailto:manager2@gmail.com") manager2@gmail.com 
+
+
+
+                    .contacts__group 
+                        p.contacts__name Юридический адрес
+
+                        .contacts__inner
+
+                            p.contacts__text г. Краснодар, ул. им. Островского 42, офис 14 (2 этаж)
+
+
+                    .contacts__phones
+
+                        .contacts__group 
+                            p.contacts__name ТЕЛЕФОН
+
+                            .contacts__inner
+
+                                a.contacts__link(href="tel:8(861)205-05-12") 8 (861) 205-05-12
+
+                        .contacts__group 
+                            p.contacts__name телефон мобильный
+
+                            .contacts__inner
+
+                                a.contacts__link(href="tel:8(918)152-95-48") 8 (918) 152-95-48
+
+                
+                .contacts__map#contacts-map
+
+
+
+
+
+
+    include ./blocks/contact_us_block
+
+    include ./blocks/_feedback
