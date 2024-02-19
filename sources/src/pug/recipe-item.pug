@@ -21,11 +21,11 @@ block page
                 .intro_recipe__info
                     .intro_recipe__time 
                         .intro_recipe__icon
-                            img(src="./images/time.svg" alt="")
+                            img(src="./images/time.svg" alt="" width="28" height="28")
                         span.intro_recipe__value 20 минут
                     .intro_recipe__level
                         .intro_recipe__icon
-                            img(src="./images/hat.svg" alt="")
+                            img(src="./images/hat.svg" alt="" width="28" height="28")
                         span.intro_recipe__value Средняя сложность
 
         .intro_recipe__images
@@ -69,15 +69,15 @@ block page
 
                         p.dish__descr Закуска из селедки со сливочным маслом готовится очень просто и быстро. А с помощью блендера, вы сможете приготовить пасту-намазку за считанные минуты. Селедочное масло - это отличный вариант для перекуса, завтрака и закуски на стол. В былые времена, селедочное масло продавали в отделе полуфабрикатов и мы иногда его покупали. Правда то масло, немного отличается от моего рецепта. Здесь больше масла, там селедки. На счет яиц, тоже сомневаюсь, были ли они там, а вот морковка, это уж точно была. Рецепт нашла на просторах интернета. Получилось очень вкусно, особенно с тонкими хрустящими хлебцами "Щедрые".
 
-                        ul.dish__social
+                        ul.dish__social 
                             li.dish__social_item.description__link
-                                a(href="#")
+                                a(href="#" aria-label="Перейти на страницу вконтакте" target="_blank")
                                     include ./blocks/icon_vk
                             li.dish__social_item.description__link
-                                a(href="#")
+                                a(href="#" aria-label="Перейти в телеграм" target="_blank")
                                     include ./blocks/icon_telegram
                             li.dish__social_item.description__link
-                                a(href="#")
+                                a(href="#" aria-label="Перейти по ссылке" target="_blank")
                                     include ./blocks/icon_link
 
 

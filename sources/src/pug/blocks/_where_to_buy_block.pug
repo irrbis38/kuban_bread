@@ -1,6 +1,7 @@
 section.where_to_buy
     .where_to_buy__bg
-        img(src="./images/where_to_buy/where_to_buy_bg.png" alt="")
+        +picture('where_to_buy/where_to_buy_bg', 'png', 'x2')
+        //- img(src="./images/where_to_buy/where_to_buy_bg.png" alt="")
 
 
     .container
@@ -14,19 +15,19 @@ section.where_to_buy
         .where_to_buy__wrapper
 
             .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_1.svg" alt="Озон")
+                img(src="./images/where_to_buy/logo_1.svg" alt="Озон" width="464" height="238")
 
             .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_2.svg" alt="Пятёрочка")
+                img(src="./images/where_to_buy/logo_2.svg" alt="Пятёрочка" width="464" height="238")
 
             .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_3.svg" alt="Табрис")
+                img(src="./images/where_to_buy/logo_3.svg" alt="Табрис" width="464" height="238")
 
-            .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_4.png" alt="Окей")
+            .where_to_buy__item
+                +pictureSize('where_to_buy/logo_4', 'png', 'x2', 464, 238)
 
-            .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_5.png" alt="FixPrice")
+            .where_to_buy__item
+                +pictureSize('where_to_buy/logo_5', 'png', 'x2',  464, 238)
 
-            .where_to_buy__item 
-                img(src="./images/where_to_buy/logo_6.png" alt="Светофор")
+            .where_to_buy__item
+                +pictureSize('where_to_buy/logo_6', 'png', 'x2', 464, 238)

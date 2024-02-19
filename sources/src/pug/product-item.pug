@@ -22,9 +22,9 @@ block page
 
             .intro_product__images__wrapper
                 .intro_product__img
-                    +pictureSize('intro_product/product_wide_1', 'jpg', 'x2', 958, 580)
+                    +pictureSizeWithoutLazy('intro_product/product_wide_1', 'jpg', 'x2', 958, 580)
                 .intro_product__img
-                    +pictureSize('intro_product/product_wide_2', 'jpg', 'x2', 476, 580)
+                    +pictureSizeWithoutLazy('intro_product/product_wide_2', 'jpg', 'x2', 476, 580)
 
 
     section.description
@@ -35,13 +35,13 @@ block page
 
             ul.description__social 
                 li.description__link
-                    a(href="#")
+                    a(href="#" aria-label="Перейти на страницу вконтакте" target="_blank")
                         include ./blocks/icon_vk
                 li.description__link
-                    a(href="#")
+                    a(href="#" aria-label="Перейти в телеграм" target="_blank")
                         include ./blocks/icon_telegram
                 li.description__link
-                    a(href="#")
+                    a(href="#" aria-label="Перейти по ссылке" target="_blank")
                         include ./blocks/icon_link
 
 
@@ -82,7 +82,7 @@ block page
         .nutrients__bg_2
             +picture('nutrients/nutrients_bg_2', 'png', 'x2')
         .nutrients__bg_3
-            +picture('nutrients/nutrients_bg_3', 'png', 'x2')
+            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 423, 407)
         .container 
             h2.nutrients__title
                 span Пищевая и энергетическая ценность
@@ -117,7 +117,7 @@ block page
         .production_more__bg
             img(src="./images/news/news_bg.png" alt="")
         .nutrients__bg_3
-            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 465, 325)
+            +pictureSize('nutrients/nutrients_bg_3', 'png', 'x2', 423, 407)
 
 
         .container
