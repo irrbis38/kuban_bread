@@ -94,11 +94,12 @@ block page
             p.cooking_process__text Ищете другие рецепты? Ваше воображение поразит палитра вкусов, которые помогут вам насладиться продуктами Wasa в полной мере.
 
             .cooking_process__wrapper
-                .cooking_process__preview
+                .cooking_process__preview.video-preview
                     +pictureNew('cooking_process/cooking_process_preview', 'jpg', '', 1452, 1000, 750, 1452, 650, 'cooking_process__img')
-                    button.cooking_process__btn(type="button" aria-label="Начать показ видео")
+                    button.cooking_process__btn.video-play-btn(type="button" aria-label="Начать показ видео")
                         svg(width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg")
                             path(d="M40 25.7002V95.7002L95 60.7002L40 25.7002Z" fill="white")
+                .cooking_process__video.video-block(data-video="https://youtu.be/yzbzFO1kBCg")
 
 
 

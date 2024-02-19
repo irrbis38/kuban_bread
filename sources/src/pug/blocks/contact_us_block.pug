@@ -11,13 +11,13 @@ section.contact_us
 
         p.contact_us__text Оставьте свои данные - мы перезвоним и ответим на #[br]интересующие вас вопросы
 
-        form.contact_us__form(action="#")
+        form.contact_us__form(action="#" novalidate)
 
             fieldset.contact_us__fieldset
 
                 input.contact_us__input(type="text" name="user_name" placeholder="Ваше имя")
-
-                input.contact_us__input(type="text" name="user_phone" placeholder="Ваш телефон")
+                //- data-maska="+7 ### ### ## ##"
+                input.contact_us__input.input-phone(type="text" name="user_phone" placeholder="Ваш телефон*" required data-maska="+HHHHHHHHHHHHH" data-maska-tokens="H:[0-9]" minlength="10")
 
                 textarea.contact_us__textarea(name="user_message" placeholder="Сообщение")
 

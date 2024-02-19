@@ -50,6 +50,12 @@ var initChangeLang = () => {
     lang_menu.classList.toggle("active");
   });
 
+  window.addEventListener("click", (e) => {
+    if (!e.target.closest(".header__lang_wrapper")) {
+      lang_menu.classList.remove("active");
+    }
+  });
+
   labels.forEach((label) => {
     label.addEventListener("click", () => {
       lang_menu.classList.remove("active");
@@ -112,13 +118,40 @@ var initForms = () => {
   var body = document.body;
   var msg_close_buttons = Array.from(document.querySelectorAll(".msg__close"));
 
-  forms.forEach((form) =>
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  var checkForm = (form, requiredElements) => {
+    requiredElements.forEach((el) => {
+      if (el.classList.contains("input-phone") && el.value.length < 10) {
+        el.classList.add("error");
+      }
+    });
+
+    var isAllInputsCorrect = !requiredElements.some((el) =>
+      el.classList.contains("error")
+    );
+
+    if (isAllInputsCorrect) {
+      form.reset();
       msg.classList.add("active");
       body.classList.add("lock");
-    })
-  );
+    }
+  };
+
+  forms.forEach((form) => {
+    var requiredElements = Array.from(form.elements).filter(
+      (el) => el.required
+    );
+    // remove error class from element by input
+    requiredElements.forEach((r_el) =>
+      r_el.addEventListener("input", () => r_el.classList.remove("error"))
+    );
+
+    // add listeners for each form
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      checkForm(form, requiredElements);
+    });
+  });
 
   msg_close_buttons.forEach((btn) =>
     btn.addEventListener("click", () => {
@@ -126,6 +159,79 @@ var initForms = () => {
       body.classList.remove("lock");
     })
   );
+};
+
+// init video
+
+var initYoutubeVideo = (videos) => {
+  // generate video url
+  var generateUrl = (id) => {
+    var query = "?rel=0&showinfo=0&autoplay=1";
+    // var query = "?ps=docs&controls=1";
+    return "https://www.youtube.com/embed/" + id + query;
+  };
+
+  // create iframe element
+  var createIframe = (id) => {
+    var iframe = document.createElement("iframe");
+    iframe.classList.add("video-iframe");
+    iframe.setAttribute("src", generateUrl(id));
+    iframe.setAttribute("title", "YouTube video player");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+    );
+
+    return iframe;
+  };
+
+  // handling each video element
+  videos.forEach((el) => {
+    var videoHref = el.dataset.video;
+    var deletedLength = "https://youtu.be/".length;
+
+    var videoId = videoHref.substring(deletedLength, videoHref.length);
+
+    var parent = el.parentElement;
+
+    var videoPlayBtn = parent.querySelector(".video-play-btn");
+
+    videoPlayBtn.addEventListener("click", () => {
+      var iframe = createIframe(videoId);
+      parent.querySelector(".video-preview").remove();
+      el.append(iframe);
+    });
+  });
+};
+
+// init mask inputs
+var initMaskaInput = () => {
+  const { MaskInput } = Maska;
+  const maskIinput = new MaskInput("[data-maska]");
+};
+
+var initModal = (btns, fullscreen) => {
+  var fullscreenImg = fullscreen.querySelector(".fullscreen__img img");
+  var fullscreenCloseBtn = fullscreen.querySelectorAll(".fullscreen-close");
+  var body = document.body;
+
+  fullscreenCloseBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      fullscreen.classList.remove("show");
+      body.classList.remove("lock");
+    });
+  });
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log(btn.dataset.src);
+      fullscreenImg.src = btn.dataset.src;
+      fullscreen.classList.add("show");
+      body.classList.add("lock");
+    });
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -138,4 +244,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var forms = document.forms;
   forms.length > 0 && initForms();
+
+  // get all video elements on the page
+  var videos = Array.from(document.querySelectorAll(".video-block"));
+  videos.length > 0 && initYoutubeVideo(videos);
+
+  // init maska
+  var maskedInput = document.querySelectorAll("[data-maska]");
+  maskedInput && initMaskaInput();
+
+  // init modal
+  var modalOpenBtns = document.querySelectorAll(".modal-open");
+  console.log(modalOpenBtns);
+  var fullscreen = document.querySelector(".fullscreen");
+  modalOpenBtns.length > 0 &&
+    fullscreen &&
+    initModal(modalOpenBtns, fullscreen);
 });

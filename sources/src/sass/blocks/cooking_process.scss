@@ -97,13 +97,18 @@
   }
 }
 
-.cooking_process__preview {
+.cooking_process__preview,
+.cooking_process__video {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
   width: 100%;
   height: 100%;
+}
+
+.cooking_process__video {
+  z-index: 2;
 }
 
 .cooking_process__btn {
@@ -129,4 +134,12 @@
       height: 60px;
     }
   }
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: none;
 }

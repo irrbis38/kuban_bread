@@ -111,6 +111,30 @@
   }
 }
 
+.contact_us__input,
+.contact_us__textarea {
+  padding: 6px 24px 8px;
+  font-weight: 500;
+  font-size: 18px;
+  color: $color_black;
+  background-color: $color_white;
+  border: 2px solid #ffe2cd;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
+
+  &.error {
+    color: #e10000;
+    border-color: #e10000;
+
+    &::placeholder {
+      color: #e10000;
+    }
+  }
+}
+
 .contact_us__input {
   min-height: 54px;
 
@@ -124,25 +148,11 @@
   grid-column-end: 3;
   min-height: 140px;
   resize: none;
+  padding: 15px 24px;
 
   @include xs {
     grid-column-end: 2;
     min-height: 197px;
-  }
-}
-
-.contact_us__input,
-.contact_us__textarea {
-  padding: 6px 24px 8px;
-  font-weight: 500;
-  font-size: 18px;
-  color: $color_black;
-  background-color: $color_white;
-  border: 2px solid #ffe2cd;
-  border-radius: 5px;
-
-  &::placeholder {
-    color: #c4c4c4;
   }
 }
 

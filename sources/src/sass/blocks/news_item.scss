@@ -241,13 +241,18 @@
   }
 }
 
-.news_item__preview {
+.news_item__preview,
+.news_item__video {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
   width: 100%;
   height: 100%;
+}
+
+.news_item__video {
+  z-index: 2;
 }
 
 .news_item__btn {

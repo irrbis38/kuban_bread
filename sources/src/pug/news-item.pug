@@ -31,23 +31,23 @@ block page
                     p Основными причинами решения о правильном питании стали лишний вес (31%), проблемы с пищеварением (29%) и постоянное чувство усталости (22%). Среди причин, по которым каждому второму (65%) россиянину так и не удалось отказаться от вредных продуктов, выделились следующие: каждый третий (39%) слишком сильно привык к своему прежнему рациону, 14% признались, что слишком любят «вредные» продукты, чтобы отказаться от них так просто, а 12% назвали задачу слишком сложной.
 
                 .news_item__gallery 
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_1.jpg")
                         +pictureSize('news/news_gallery_1', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_2.jpg")
                         +pictureSize('news/news_gallery_2', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_3.jpg")
                         +pictureSize('news/news_gallery_3', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_2.jpg")
                         +pictureSize('news/news_gallery_2', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_4.jpg")
                         +pictureSize('news/news_gallery_4', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_2.jpg")
                         +pictureSize('news/news_gallery_2', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_7.jpg")
                         +pictureSize('news/news_gallery_7', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_2.jpg")
                         +pictureSize('news/news_gallery_2', 'jpg', 'x2', 958, 580)
-                    .news_item__item
+                    .news_item__item.modal-open(data-src="./images/news/news_gallery_4.jpg")
                         +pictureSize('news/news_gallery_4', 'jpg', 'x2', 958, 580)
 
                 .news_item__text
@@ -62,11 +62,13 @@ block page
 
 
                 .news_item__wrapper
-                    .news_item__preview
+                    .news_item__preview.video-preview
                         +pictureNew('cooking_process/cooking_process_preview', 'jpg', '', 1452, 1000, 750, 1452, 650, 'cooking_process__img')
-                        button.news_item__btn(type="button" aria-label="Начать показ видео")
+                        button.news_item__btn.video-play-btn(type="button" aria-label="Начать показ видео")
                             svg(width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg")
                                 path(d="M40 25.7002V95.7002L95 60.7002L40 25.7002Z" fill="white")
+
+                    .news_item__video.video-block(data-video="https://youtu.be/yzbzFO1kBCg")
 
 
 
@@ -91,6 +93,9 @@ block page
                 li.description__link
                     a(href="#" aria-label="Перейти по ссылке" target="_blank")
                         include ./blocks/icon_link
+
+
+    include ./blocks/fullscreen
 
 
 

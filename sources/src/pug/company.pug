@@ -93,10 +93,13 @@ block page
 
                 each item in s_list 
 
-                    li.sertificats__item 
+                    li.sertificats__item.modal-open(data-src="./images/sertificats/sertificat.jpg")
                         +pictureSize('sertificats/sertificat', 'jpg', 'x2', 217, 298)
 
             button.btn.awards__more(type="button") Загрузить ещё
+
+
+    include ./blocks/fullscreen
 
 
 
