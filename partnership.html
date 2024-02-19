@@ -100,11 +100,11 @@
         <div class="container">
           <h2 class="contact_us__title block__subtitle">Обратная связь</h2>
           <p class="contact_us__text">Оставьте свои данные - мы перезвоним и ответим на <br>интересующие вас вопросы</p>
-          <form class="contact_us__form" action="#">
+          <form class="contact_us__form" action="#" novalidate>
             <fieldset class="contact_us__fieldset">
               <input class="contact_us__input" type="text" name="user_name" placeholder="Ваше имя">
-              <input class="contact_us__input" type="text" name="user_phone" placeholder="Ваш телефон">
-              <textarea class="contact_us__textarea" name="user_message" placeholder="Сообщение" row="4"></textarea>
+              <input class="contact_us__input input-phone" type="text" name="user_phone" placeholder="Ваш телефон*" required data-maska="+HHHHHHHHHHHHH" data-maska-tokens="H:[0-9]" minlength="10">
+              <textarea class="contact_us__textarea" name="user_message" placeholder="Сообщение"></textarea>
             </fieldset>
             <button class="contact_us__submit btn btn_blue_dark" type="submit">Отправить данные</button>
             <p class="contact_us__policy">Отправляя данные я соглашаюсь с <a href="#" target="_blank">политикой конфиденциальности</a></p>
@@ -139,7 +139,7 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <p class="footer__copyright">© 2024 ООО  "Кубанские хлебцы"</p><a class="footer__created_by" href="https://art6.ru/" target="_blank"><img src="./images/art6.svg" alt="ART6"></a><a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p class="footer__copyright">© 2024 ООО  "Кубанские хлебцы"</p><a class="footer__created_by" href="https://art6.ru/" target="_blank"><img src="./images/art6.svg" alt="ART6" width="186" height="234"></a><a class="footer__policy" href="#">Политика конфиденциальности</a>
       </div>
     </footer>
     <script src="js/main.min.js"></script>
