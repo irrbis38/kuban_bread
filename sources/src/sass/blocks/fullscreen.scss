@@ -34,6 +34,20 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.fullscreen__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
 .fullscreen__container {
   position: absolute;
   top: 50%;
@@ -46,7 +60,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: #fff;
 }
 
 .fullscreen__wrapper {
@@ -55,7 +68,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
 }
 
 .fullscreen__close {
