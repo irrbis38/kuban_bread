@@ -5,13 +5,13 @@ var initHeaderMenu = () => {
 
   if (body && burger_btn && header_menu) {
     burger_btn.addEventListener("click", function () {
-      body.classList.toggle("lock");
+      body.classList.toggle("noscroll");
       burger_btn.classList.toggle("active");
       header_menu.classList.toggle("active");
     });
 
     var clearActive = () => {
-      body.classList.remove("lock");
+      body.classList.remove("noscroll");
       burger_btn.classList.remove("active");
       header_menu.classList.remove("active");
     };
@@ -226,7 +226,6 @@ var initModal = (btns, fullscreen) => {
 
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log(btn.dataset.src);
       fullscreenImg.src = btn.dataset.src;
       fullscreen.classList.add("show");
       body.classList.add("lock");
@@ -255,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // init modal
   var modalOpenBtns = document.querySelectorAll(".modal-open");
-  console.log(modalOpenBtns);
   var fullscreen = document.querySelector(".fullscreen");
   modalOpenBtns.length > 0 &&
     fullscreen &&
