@@ -5,8 +5,8 @@
 - Pug
 - SCSS
 - JS
-- 
-![screenshot]()
+
+![screenshot](https://github.com/irrbis38/kuban_bread/assets/66014974/f2dc1d9b-d82f-4a6e-81db-8e33767249b0)
 
 ## Страницы:
 - [Главная страница](https://irrbis38.github.io/kuban_bread/done/index.html)
